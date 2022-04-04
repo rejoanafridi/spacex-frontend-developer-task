@@ -1,0 +1,84 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+:root {
+}
+* {
+	/* background: #1E1B3A; */
+}
+
+.icon-block {
+	padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.brand-logo img {
+	margin-top: 10px;
+}
+.nav-items {
+	display: flex;
+	justify-content: space-between;
+}
+.contact-btn {
+	border: 2px solid rgba(112, 72, 221, 1);
+}
+/* Card css */
+.title {
+	background: #383178;
+	display: flex;
+	align-items: center;
+	width: 50%;
+}
+.banner-left-img img{
+	position: absolute;
+	top: 203px;
+	left: 91px;
+}
+.left-content{
+	/* margin-left: 300px!important; */
+	margin-top: 150px;
+}
+.title span {
+	display: flex;
+
+	align-items: center;
+	padding: 5px;
+	color: #fff;
+}
+.btn {
+	width: 200px;
+	padding: 10px;
+	height: 50px;
+}
+.man{
+  width: 720px;
+  position: absolute;
+   right: 350px;
+   top: 60px;
+}
+.banner-image{
+
+  position: absolute;
+
+  top: 10px;
+  right: 0px;
+  height : 760px;
+  width: 960px;
+
+}
+.banner-image-world{
+	position: absolute;
+	top: 308px;
+	right: 300px;
+}
+.banner-image-ring{
+	position: absolute;
+	top: 642px;
+	right: 190px;
+ 
+}
