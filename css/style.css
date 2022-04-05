@@ -6,11 +6,14 @@
  * Made By MaterializeCSS.com
  */
 :root {
+	--purple: #8c21ed;
+
+	--fav-color: linear-gradient(95.48deg, #2317fa -1.25%, #d529e4 97.48%);
 }
 * {
-	/* background: #1E1B3A; */
+	margin: 0;
+	padding: 0;
 }
-
 .icon-block {
 	padding: 0 15px;
 }
@@ -20,28 +23,70 @@
 .brand-logo img {
 	margin-top: 10px;
 }
-.nav-items {
-	display: flex;
-	justify-content: space-between;
+nav {
+	padding-top: 10px;
 }
-.contact-btn {
-	border: 2px solid rgba(112, 72, 221, 1);
+
+.nav ul a:hover {
+	color: var(--purple);
 }
+nav ul li a {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.contact-btns {
+	border: 3px solid;
+	border-image-source: var(--fav-color);
+	border-image-slice: 1;
+	border-width: 3px;
+	padding: 10px 25px;
+}
+
+.section-banner {
+	padding-bottom: 200px;
+}
+
 /* Card css */
 .title {
-	background: #383178;
+	background: rgba(9, 9, 9, 1);
 	display: flex;
 	align-items: center;
 	width: 50%;
+	border-radius: 5px;
 }
-.banner-left-img img{
+.banner-left-img-shape {
 	position: absolute;
 	top: 203px;
-	left: 91px;
+	left: 401px;
 }
-.left-content{
-	/* margin-left: 300px!important; */
+.banner-left-img-bolb {
+	position: absolute;
+	top: 260px;
+	left: 140px;
+}
+.left-content h1 {
+	font-family: Russo One;
+	font-size: 83px;
+	font-weight: 400;
+	line-height: 100px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.left-content p {
+	font-family: Inter;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 33px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.left-content {
 	margin-top: 150px;
+	margin-left: 200px !important;
 }
 .title span {
 	display: flex;
@@ -50,35 +95,163 @@
 	padding: 5px;
 	color: #fff;
 }
-.btn {
+.span-text p {
+	background: var(--fav-color);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.banner-btns {
 	width: 200px;
 	padding: 10px;
 	height: 50px;
+	background-image: var(--fav-color);
+	color: #fff;
 }
-.man{
-  width: 720px;
-  position: absolute;
-   right: 350px;
-   top: 60px;
+.man {
+	width: 720px;
+	position: absolute;
+	right: 510px;
+	top: 60px;
 }
-.banner-image{
+.banner-image {
+	position: absolute;
 
-  position: absolute;
-
-  top: 10px;
-  right: 0px;
-  height : 760px;
-  width: 960px;
-
+	top: 0px;
+	right: 0px;
+	height: 850px;
+	width: 1200px;
 }
-.banner-image-world{
+.banner-image-world {
 	position: absolute;
 	top: 308px;
-	right: 300px;
+	right: 500px;
 }
-.banner-image-ring{
+.banner-image-ring {
 	position: absolute;
-	top: 642px;
-	right: 190px;
- 
+	top: 700px;
+	right: 340px;
+}
+.banner-star {
+	position: absolute;
+	right: 600px;
+	top: 50px;
+}
+/* card css */
+.rocket-section-header {
+	border: 1px solid #fff;
+
+	padding: 10px;
+
+	background: rgba(30, 27, 58, 1);
+}
+.card-section {
+	padding: 120px 0;
+}
+h1 {
+	margin: 0;
+	padding: 50px 0;
+	font-family: Russo One;
+	font-size: 50px;
+	font-weight: 400;
+	line-height: 60px;
+	letter-spacing: 0em;
+}
+.cards-content {
+	background: #231e44;
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.cards-content:hover {
+	background-image: var(--fav-color);
+}
+.search input {
+	border: 1px solid #dadada;
+	background: transparent;
+	color: 1.5px solid #dadada;
+	padding: 10px;
+	width: 60%;
+}
+.search button {
+	color: white;
+	padding: 10px;
+	background: rgba(14, 13, 34, 1);
+}
+
+/* rocket card csc */
+.rocket-card-content {
+	background: #1d0c41;
+}
+.rocket-card-content span {
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.rocket-card-content p {
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.rocket-section-card {
+	margin-top: 40px;
+}
+.rocket-pagination {
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+/* about css */
+.email-subscription {
+	padding: 100px 0px;
+	width: 50%;
+}
+.email-subscription h1 {
+	font-family: Russo One;
+	font-size: 60px;
+	font-weight: 400;
+	line-height: 72px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.subscribe input {
+	border: 2px solid #dadada;
+	background: transparent;
+	color: 1.5px solid #dadada;
+	padding: 10px;
+	width: 40%;
+}
+.subscribe button {
+	border: 3px solid;
+	border-image-source: var(--fav-color);
+	border-image-slice: 1;
+	border-width: 3px;
+	padding: 10px 25px;
+	background: transparent;
+	color: white;
+}
+/* footer */
+.footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 20px 0;
+}
+.footer p {
+	font-size: 18px;
+	color: white;
+}
+.footer-icons {
+	font-size: 30px;
+	color: #5b5b5b;
+	display: flex;
+	justify-content: space-around;
 }
