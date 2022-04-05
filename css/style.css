@@ -61,12 +61,11 @@ nav ul li a {
 .banner-left-img-shape {
 	position: absolute;
 	top: 203px;
-	left: 401px;
+	left: 101px;
 }
 .banner-left-img-bolb {
 	position: absolute;
 	top: 260px;
-	left: 140px;
 }
 .left-content h1 {
 	font-family: Russo One;
@@ -86,7 +85,6 @@ nav ul li a {
 }
 .left-content {
 	margin-top: 150px;
-	margin-left: 200px !important;
 }
 .title span {
 	display: flex;
@@ -106,30 +104,33 @@ nav ul li a {
 	height: 50px;
 	background-image: var(--fav-color);
 	color: #fff;
+	margin-top: 50px;
 }
 .man {
-	width: 720px;
+	width: 670px;
+	height: 670px;
 	position: absolute;
-	right: 510px;
-	top: 60px;
+	right: 351px;
+	top: 149px;
 }
 .banner-image {
 	position: absolute;
 
-	top: 0px;
+	top: -20px;
 	right: 0px;
-	height: 850px;
-	width: 1200px;
+	height: 857px;
+	width: 900px;
 }
 .banner-image-world {
 	position: absolute;
-	top: 308px;
-	right: 500px;
+	top: 386px;
+	right: 284px;
 }
 .banner-image-ring {
 	position: absolute;
 	top: 700px;
-	right: 340px;
+	right: 106px;
+	width: 136px;
 }
 .banner-star {
 	position: absolute;
@@ -143,6 +144,16 @@ nav ul li a {
 	padding: 10px;
 
 	background: rgba(30, 27, 58, 1);
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 27px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.rocket-section-header p{
+	color: #ababab;
+
 }
 .card-section {
 	padding: 120px 0;
