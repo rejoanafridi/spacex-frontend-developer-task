@@ -10,14 +10,17 @@ function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
+				<Nav></Nav>
+				<Home></Home>
+				<Footer></Footer>
 				<Routes>
-					<Route path="/" element={<Nav></Nav>}>
+					<Route path="/" element={""}>
 						{" "}
 					</Route>
-					<Route path="home" element={<Home></Home>}>
+					<Route path="home" element={""}>
 						{" "}
 					</Route>
-					<Route path="about" element={<About></About>}>
+					<Route path="about" element={""}>
 						{" "}
 					</Route>
 					<Route path="blog" element={""}>
@@ -27,8 +30,6 @@ function App() {
 						{" "}
 					</Route>
 				</Routes>
-          <Home></Home>
-          <Footer></Footer>
 			</BrowserRouter>
 		</div>
 	);
