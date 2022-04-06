@@ -19,6 +19,20 @@ h1 {
 	letter-spacing: 0em;
 	text-align: center;
 }
+.card-content img {
+	width: 150px;
+}
+.card-content p {
+     padding-left:2vw;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     width: 325px;
+     line-height: 25px;
+     display: -webkit-box;
+     -webkit-line-clamp: 5;
+     -webkit-box-orient: vertical;
+     padding-top: 15px;
+}
 .cards-content:hover {
 	background-image: var(--fav-color);
 }

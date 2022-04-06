@@ -31,7 +31,17 @@
 .rocket-card-content {
 	background: #1d0c41;
 }
-.rocket-card-content span {
+.rocket-card-content span  {
+
+	font-family: Russo One;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 36px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.rocket-card-content p  {
+
 	font-family: Inter;
 	font-size: 18px;
 	font-weight: 400;
@@ -39,18 +49,13 @@
 	letter-spacing: 0em;
 	text-align: center;
 }
-.rocket-card-content p {
-	font-family: Inter;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 27px;
-	letter-spacing: 0em;
-	text-align: center;
+.card-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .rocket-section-card {
 	margin-top: 40px;
 }
-.rocket-pagination {
-	padding-top: 55px;
-	padding-bottom: 55px;
-}
+

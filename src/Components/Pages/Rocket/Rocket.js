@@ -1,6 +1,33 @@
-import React from "react";
-import "./Rocket.css"
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Pagination from "../Paginations/Pagination";
+import "./Rocket.css";
+import Rockets from "./Rockets";
 const Rocket = () => {
+	const [roket, setData] = useState([]);
+	// const [loading, setLoading] = useState([false]);
+	const [currentPage, setCurrentPage] = useState(1);
+	const [selectItems] = useState([8]);
+
+	// change page
+	const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			// setLoading(true);
+			const res = await axios.get("https://api.spacexdata.com/v3/launches");
+			setData(res.data);
+			// setLoading(false);
+		};
+		fetchData();
+		// console.log(roket);
+	}, []);
+
+	// get current data
+	const indexOfLastRocket = currentPage * selectItems;
+	const indexOfFirstRocket = indexOfLastRocket - selectItems;
+	const currentRockets = roket.slice(indexOfFirstRocket, indexOfLastRocket);
+	// console.log(currentRockets);
 	return (
 		<section className=" indigo darken-4">
 			<div className="rocket-section-header container red-text ">
@@ -8,7 +35,7 @@ const Rocket = () => {
 					<div className="col s6">
 						<div className="row">
 							<div className="col s6 valign-wrapper">
-								<p>is upcomming?</p>
+								<p>Is upcomming?</p>
 								<div className="col s6">
 									<select className="browser-default">
 										<option value="1">Yes</option>
@@ -21,7 +48,7 @@ const Rocket = () => {
 								<div className="col s6">
 									<select className="browser-default text-white">
 										<option value="1">2005-2006</option>
-										<option value="2">No</option>
+										<option value="2">2007-2008</option>
 									</select>
 								</div>
 							</div>
@@ -38,128 +65,15 @@ const Rocket = () => {
 			</div>
 
 			<div className="row container rocket-section-card">
-				<div className="col s12 m4 l3">
-					<div className="card rocket-card-content">
-						<div className="card-content white-text">
-							<span className="card-title">Card Title</span>
-							<p>
-								I am a very simple card. I am good at containing small bits of
-								information. I am convenient because I require little markup to
-								use effectively.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="col s12 m4 l3">
-					<div className="card rocket-card-content">
-						<div className="card-content white-text">
-							<span className="card-title">Card Title</span>
-							<p>
-								I am a very simple card. I am good at containing small bits of
-								information. I am convenient because I require little markup to
-								use effectively.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="col s12 m4 l3">
-					<div className="card rocket-card-content">
-						<div className="card-content white-text">
-							<span className="card-title">Card Title</span>
-							<p>
-								I am a very simple card. I am good at containing small bits of
-								information. I am convenient because I require little markup to
-								use effectively.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="col s12 m4 l3">
-					<div className="card rocket-card-content">
-						<div className="card-content white-text">
-							<span className="card-title">Card Title</span>
-							<p>
-								I am a very simple card. I am good at containing small bits of
-								information. I am convenient because I require little markup to
-								use effectively.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="col s12 m4 l3">
-					<div className="card rocket-card-content">
-						<div className="card-content white-text">
-							<span className="card-title">Card Title</span>
-							<p>
-								I am a very simple card. I am good at containing small bits of
-								information. I am convenient because I require little markup to
-								use effectively.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="col s12 m4 l3">
-					<div className="card rocket-card-content">
-						<div className="card-content white-text">
-							<span className="card-title">Card Title</span>
-							<p>
-								I am a very simple card. I am good at containing small bits of
-								information. I am convenient because I require little markup to
-								use effectively.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="col s12 m4 l3">
-					<div className="card rocket-card-content">
-						<div className="card-content white-text">
-							<span className="card-title">Card Title</span>
-							<p>
-								I am a very simple card. I am good at containing small bits of
-								information. I am convenient because I require little markup to
-								use effectively.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div className="col s12 m4 l3">
-					<div className="card rocket-card-content">
-						<div className="card-content white-text">
-							<span className="card-title">Card Title</span>
-							<p>
-								I am a very simple card. I am good at containing small bits of
-								information. I am convenient because I require little markup to
-								use effectively.
-							</p>
-						</div>
-					</div>
-				</div>
+				{currentRockets.map((rockets, index) => (
+					<Rockets rockets={rockets} key={index}></Rockets>
+				))}
 			</div>
-			<div className="rocket-pagination center">
-				<ul className="pagination">
-					<li className="active">
-						<a href="#!">1</a>
-					</li>
-					<li className="waves-effect">
-						<a href="#!">2</a>
-					</li>
-					<li className="waves-effect">
-						<a href="#!">3</a>
-					</li>
-					<li className="waves-effect">
-						<a href="#!">.</a>
-					</li>
-					<li className="waves-effect">
-						<a href="#!">.</a>
-					</li>
-					<li className="waves-effect">
-						<a href="#!">.</a>
-					</li>
-					<li className="waves-effect">
-						<a href="#!">10</a>
-					</li>
-				</ul>
-			</div>
+			<Pagination
+				selectItems={selectItems}
+				totalItems={roket.length}
+				paginate={paginate}
+			></Pagination>
 		</section>
 	);
 };

@@ -1,0 +1,11 @@
+.rocket-pagination {
+	padding-top: 55px;
+	padding-bottom: 55px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.pagination li a:hover{
+     color: black;
+     background: #fff;
+}

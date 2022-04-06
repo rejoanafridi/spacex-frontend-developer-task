@@ -1,6 +1,7 @@
 import React from "react";
 import "./Nav.css";
 import vectorImg from '../../../images/Vector.png'
+import { Link } from "react-router-dom";
 const Nav = () => {
 	return (
 		<nav className="indigo darken-4">
@@ -13,21 +14,21 @@ const Nav = () => {
 				</div>
 				<ul className="hide-on-med-and-down col s6 ">
 					<li>
-						<a href="#">Home</a>
+						<Link to="/home">Home</Link>
 					</li>
 					<li>
-						<a href="#">About us</a>
+						<Link to="/about">About us</Link>
 					</li>
 					<li>
-						<a href="#">story</a>
+						<Link to="/story">story</Link>
 					</li>
 					<li>
-						<a href="#">blog</a>
+						<Link to="/blog">blog</Link>
 					</li>
 					<li>
-						<a className="contact-btns" href="#">
+						<Link className="contact-btns" to="/contact">
 							contact us
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</div>
