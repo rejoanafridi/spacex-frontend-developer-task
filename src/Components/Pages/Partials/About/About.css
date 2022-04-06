@@ -1,0 +1,29 @@
+.email-subscription {
+	padding: 100px 0px;
+	width: 50%;
+}
+.email-subscription h1 {
+	font-family: Russo One;
+	font-size: 60px;
+	font-weight: 400;
+	line-height: 72px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+.subscribe input {
+	border: 2px solid #dadada;
+	background: transparent;
+	color: 1.5px solid #dadada;
+	padding: 10px;
+	width: 40%;
+}
+.subscribe button {
+	border: 3px solid;
+	border-image-source: var(--fav-color);
+	border-image-slice: 1;
+	border-width: 3px;
+	padding: 10px 25px;
+	background: transparent;
+	color: white;
+}

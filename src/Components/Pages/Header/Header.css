@@ -1,34 +1,3 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
- :root {
-	--purple: #8c21ed;
-
-	--fav-color: linear-gradient(95.48deg, #2317fa -1.25%, #d529e4 97.48%);
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-.icon-block {
-	padding: 0 15px;
-}
-.icon-block .material-icons {
-	font-size: inherit;
-}
-.brand-logo img {
-	margin-top: 10px;
-}
-
-.section-banner {
-	padding-bottom: 200px;
-}
-
-/* Header css */
 .title {
 	background: rgba(9, 9, 9, 1);
 	display: flex;
@@ -114,25 +83,4 @@
 	position: absolute;
 	right: 600px;
 	top: 50px;
-}
-/* card css */
-
-/* about css */
-
-/* footer */
-.footer {
-	display: flex;
-	justify-content: space-around;
-	align-items: flex-start;
-	padding: 20px 0;
-}
-.footer p {
-	font-size: 18px;
-	color: white;
-}
-.footer-icons {
-	font-size: 30px;
-	color: #5b5b5b;
-	display: flex;
-	justify-content: space-around;
 }
