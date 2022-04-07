@@ -5,39 +5,45 @@ import "./Rocket.css";
 import Rockets from "./Rockets";
 const Rocket = () => {
 	const [roket, setRoket] = useState([]);
-	const [maindata, setMainData] = useState([]);
-	// const [loading, setLoading] = useState([false]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [selectItems] = useState([8]);
+	//select date state
+	const [selectDate, setSelectDate] = useState([]);
+	console.log(selectDate);
+	// sett launch state
+	const [launch, setLaunch] = useState("");
+	console.log(launch);
+	// upcoming filter
+	useEffect(() => {
+		const launchFilter = async () => {
+			const results = await axios(
+				`https://api.spacexdata.com/v3/launches/${launch}`
+			);
+			setRoket(results.data);
+		};
+		launchFilter();
+	}, [launch]);
 
 	// search by name
 
 	const [value, setValue] = useState("");
 	const onChange = (q) => {
-		// q.capitalize();
-		
 		setValue(q);
 	};
-	
+
 	// console.log(value);
 	useEffect(() => {
 		const searchByName = async () => {
-		
 			const result = await axios(
 				`https://api.spacexdata.com/v3/launches?rocket_name=${value}`
 			);
-			
+
 			setRoket(result.data);
 		};
 		searchByName();
 	}, [value]);
 
-	// let searchResult = await roket.filter((item) =>
-	// 	item.rocket.rocket_name.toLowerCase().includes(search.toLowerCase())
-	// );
-	// setRoket(searchResult);
-
-	
+	//
 
 	//paginate change page
 	const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -67,19 +73,38 @@ const Rocket = () => {
 						<div className="row">
 							<div className="col s6 valign-wrapper">
 								<p>Is upcomming?</p>
-								<div className="col s6">
+								<div
+									className="col s6"
+									onChange={(e) => {
+										const upcoming = e.target.value;
+										setLaunch(upcoming);
+									}}
+								>
 									<select className="browser-default">
-										<option value="1">Yes</option>
-										<option value="2">No</option>
+										<option value=".">No</option>
+										<option value="upcoming">Yes</option>
 									</select>
 								</div>
 							</div>
 							<div className="col s6 flex">
 								<p>launch Year?</p>
 								<div className="col s6">
-									<select className="browser-default text-white">
-										<option value="1">2005-2006</option>
-										<option value="2">2007-2008</option>
+									<select
+										className="browser-default text-white"
+										onChange={(e) => {
+											const selectYear = e.target.value;
+											setSelectDate(selectYear);
+										}}
+									>
+										<option value="1">1990</option>
+										<option value="2">1991-1995</option>
+										<option value="3">1996-2000</option>
+										<option value="4">2001-2005</option>
+										<option value="5">2006-2010</option>
+										<option value="6">2011-2015</option>
+										<option value="7">2011-2015</option>
+										<option value="8">2016-2020</option>
+										<option value="9">2021</option>
 									</select>
 								</div>
 							</div>
