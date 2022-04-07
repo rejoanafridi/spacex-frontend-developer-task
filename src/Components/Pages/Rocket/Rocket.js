@@ -1,22 +1,53 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Pagination from "../Paginations/Pagination";
 import "./Rocket.css";
 import Rockets from "./Rockets";
 const Rocket = () => {
-	const [roket, setData] = useState([]);
+	const [roket, setRoket] = useState([]);
+	const [maindata, setMainData] = useState([]);
 	// const [loading, setLoading] = useState([false]);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [selectItems] = useState([8]);
 
-	// change page
+	// search by name
+
+	const [value, setValue] = useState("");
+	const onChange = (q) => {
+		// q.capitalize();
+		
+		setValue(q);
+	};
+	
+	// console.log(value);
+	useEffect(() => {
+		const searchByName = async () => {
+		
+			const result = await axios(
+				`https://api.spacexdata.com/v3/launches?rocket_name=${value}`
+			);
+			
+			setRoket(result.data);
+		};
+		searchByName();
+	}, [value]);
+
+	// let searchResult = await roket.filter((item) =>
+	// 	item.rocket.rocket_name.toLowerCase().includes(search.toLowerCase())
+	// );
+	// setRoket(searchResult);
+
+	
+
+	//paginate change page
 	const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			// setLoading(true);
 			const res = await axios.get("https://api.spacexdata.com/v3/launches");
-			setData(res.data);
+			setRoket(res.data);
+			// setMainData(res.data);
 			// setLoading(false);
 		};
 		fetchData();
@@ -57,7 +88,12 @@ const Rocket = () => {
 
 					<div className="col s6 center">
 						<div className="search flex">
-							<input type="" placeholder="search..." />
+							<input
+								type=""
+								value={value}
+								onChange={(e) => onChange(e.target.value)}
+								placeholder="search by name"
+							/>
 							<button>Search</button>
 						</div>
 					</div>

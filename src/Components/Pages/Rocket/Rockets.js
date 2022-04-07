@@ -1,8 +1,8 @@
 import React from "react";
 
 const Rockets = ({ rockets }) => {
-	const { links, rocket, upcoming, launch_year } = rockets;
-	console.log(rockets);
+	const { links, mission_name, rocket, upcoming, launch_year } = rockets;
+	// console.log(rockets);
 	return (
 		<div className="col s12 m4 l3">
 			<div className="card rocket-card-content">
@@ -12,7 +12,7 @@ const Rockets = ({ rockets }) => {
 						src={links.mission_patch}
 						alt="rocket"
 					/>
-					<span>{rocket.rocket_name}</span>
+					<span>{mission_name}</span>
 					<p>Rocket name: {rocket.rocket_name}</p>
 					<p>Launch Year: {launch_year ? launch_year : "none"}</p>
 					<p>Upcomming: {upcoming ? "true" : "false"}</p>

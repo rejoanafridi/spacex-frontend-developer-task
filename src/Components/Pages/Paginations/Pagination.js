@@ -5,7 +5,7 @@ const Pagination = ({ selectItems, totalItems,paginate }) => {
 	for (let i = 1; i <= Math.ceil(totalItems / selectItems); i++) {
 		pageNumbers.push(i);
 	}
-	console.log(pageNumbers);
+	// console.log(pageNumbers);
 	return (
 		<div className="rocket-pagination center">
 			{pageNumbers.map((number) => (
