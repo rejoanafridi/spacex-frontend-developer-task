@@ -1,3 +1,4 @@
+/* Header css */
 .title {
 	background: rgba(9, 9, 9, 1);
 	display: flex;
@@ -66,7 +67,7 @@
 	top: -20px;
 	right: 0px;
 	height: 857px;
-	width: 1400px;
+	width: 900px;
 }
 .banner-image-world {
 	position: absolute;

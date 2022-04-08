@@ -2913,6 +2913,12 @@ ul.staggered-list li {
 	.hide-on-small-and-down {
 		display: none !important;
 	}
+	.man{
+		display: none;
+	}
+	.banner-image{
+		
+	}
 }
 
 @media only screen and (max-width: 992px) {
@@ -4545,6 +4551,13 @@ html {
 @media only screen and (min-width: 992px) {
 	html {
 		font-size: 14.5px;
+	}
+	.man{
+	/* display: none; */
+		
+	}
+	.banner-image{
+		
 	}
 }
 

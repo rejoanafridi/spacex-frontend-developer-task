@@ -1,14 +1,14 @@
 import React from "react";
-import imgShape from '../../images/3 1.png';
-import imgEllipse from '../../images/Ellipse 1.png';
-import imgR82 from '../../images/r8 2.svg';
+import imgShape from "../../images/3 1.png";
+import imgEllipse from "../../images/Ellipse 1.png";
+import imgR82 from "../../images/r8 2.svg";
 
-import imgAsste5 from '../../images/Asset 5@2x-8.png';
-import imgAsste1 from '../../images/Asset 1@8x-8 1.png';
-import imgR81 from '../../images/r8 1.png';
-import imgR72 from '../../images/r7 2.png';
-import img21 from '../../images/2 1.png';
-
+import imgAsste5 from "../../images/Asset 5@2x-8.png";
+import imgAsste1 from "../../images/Asset 1@8x-8 1.png";
+import imgR81 from "../../images/r8 1.png";
+import imgR72 from "../../images/r7 2.png";
+import img21 from "../../images/2 1.png";
+import './Header.css'
 const Header = () => {
 	return (
 		<header className="section-banner indigo darken-4">
@@ -16,12 +16,12 @@ const Header = () => {
 				<div className="row">
 					<div className="col s1 m2 l2  ">
 						<img
-							className="banner-left-img-shape"
+							className="banner-left-img-shape responsive-img"
 							src={imgShape}
 							alt=""
 						/>
 						<img
-							className="banner-left-img-bolb"
+							className="banner-left-img-bolb responsive-img"
 							src={imgEllipse}
 							alt=""
 						/>
@@ -29,7 +29,7 @@ const Header = () => {
 					<div className="col s2 m4 l4 left-content ">
 						<div className="title">
 							<span>
-								<img src={imgR82} alt="" />{" "}
+								<img className="responsive-img" src={imgR82} alt="" />{" "}
 							</span>
 							<span className="span-text">
 								<p>Welcome to Stella</p>
@@ -50,20 +50,24 @@ const Header = () => {
 					</div>
 					<div className="col s12 m6 l6 ">
 						<img
-							className="banner-star"
+							className="banner-star responsive-img"
 							src={imgAsste5}
 							alt=""
 						/>
 						<img className="man" src={imgAsste1} alt="" />
 						<div>
-							<img className="banner-image" src={imgR81} alt="" />
 							<img
-								className="banner-image-world"
+								className="banner-image "
+								src={imgR81}
+								alt=""
+							/>
+							<img
+								className="banner-image-world responsive-img"
 								src={imgR72}
 								alt=""
 							/>
 							<img
-								className="banner-image-ring"
+								className="banner-image-ring responsive-img"
 								src={img21}
 								alt=""
 							/>

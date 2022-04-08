@@ -8,11 +8,45 @@ const Rocket = () => {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [selectItems] = useState([8]);
 	//select date state
+	const [dateValue, selectDateValue] = useState([]);
 	const [selectDate, setSelectDate] = useState([]);
-	console.log(selectDate);
+
+	// console.log(selectDate);
+	// console.log(selectDate);
+	// console.log(roket);
+
 	// sett launch state
 	const [launch, setLaunch] = useState("");
-	console.log(launch);
+
+	useEffect(() =>  {
+		// const selectValue = parseInt(e.target.value);
+
+		const dateFilter = async (date) => {
+			const results = await axios(
+				`https://api.spacexdata.com/v3/launches?launch_year=${date}`
+			);
+			// console.log(results.data);
+			return results.data;
+		};
+		// console.log(dateFilter);
+		if (selectDate === 1990 || selectDate === 2021) {
+			const result = dateFilter(selectDate);
+			console.log(result)
+			// setRoket(result);
+		} else {
+			let result = [];
+			const firstYear = selectDate - 4;
+			for (let i = firstYear; i <= selectDate; i++) {
+				let resultFilterDate = dateFilter(i);
+				console.log(resultFilterDate);
+				// result = [...result, ...resultFilterDate];
+				// console.log(result)
+			}
+			// setRoket(result);
+		}
+	}, [selectDate]);
+
+	// console.log(launch);
 	// upcoming filter
 	useEffect(() => {
 		const launchFilter = async () => {
@@ -92,19 +126,18 @@ const Rocket = () => {
 									<select
 										className="browser-default text-white"
 										onChange={(e) => {
-											const selectYear = e.target.value;
-											setSelectDate(selectYear);
+											setSelectDate(parseInt(e.target.value));
 										}}
 									>
-										<option value="1">1990</option>
-										<option value="2">1991-1995</option>
-										<option value="3">1996-2000</option>
-										<option value="4">2001-2005</option>
-										<option value="5">2006-2010</option>
-										<option value="6">2011-2015</option>
-										<option value="7">2011-2015</option>
-										<option value="8">2016-2020</option>
-										<option value="9">2021</option>
+										<option value="1990">1990</option>
+										<option value="1995">1991-1995</option>
+										<option value="2000">1996-2000</option>
+										<option value="2005">2001-2005</option>
+										<option value="2010">2006-2010</option>
+										<option value="2015">2011-2015</option>
+
+										<option value="2020">2016-2020</option>
+										<option value="2021">2021</option>
 									</select>
 								</div>
 							</div>
