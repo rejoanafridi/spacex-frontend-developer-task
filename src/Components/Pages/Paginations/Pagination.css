@@ -1,11 +1,19 @@
 .rocket-pagination {
 	padding-top: 55px;
 	padding-bottom: 55px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.pagination li a:hover{
-     color: black;
-     background: #fff;
+.pagination li a:hover {
+	color: black;
+	background: #fff;
+}
+@media only screen and (min-width: 320px) {
+	.rocket-pagination {
+		
+	}
+	.rocket-pagination li a {
+		font-size: .9rem;
+	}
 }

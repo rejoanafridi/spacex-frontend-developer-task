@@ -5,7 +5,7 @@
  *
  * Made By MaterializeCSS.com
  */
- :root {
+:root {
 	--purple: #8c21ed;
 
 	--fav-color: linear-gradient(95.48deg, #2317fa -1.25%, #d529e4 97.48%);
@@ -28,7 +28,6 @@
 	padding-bottom: 200px;
 }
 
-
 /* card css */
 
 /* about css */
@@ -36,8 +35,8 @@
 /* footer */
 .footer {
 	display: flex;
-	justify-content: space-around;
-	align-items: flex-start;
+	justify-content: space-between;
+	align-items: center;
 	padding: 20px 0;
 }
 .footer p {
@@ -49,4 +48,25 @@
 	color: #5b5b5b;
 	display: flex;
 	justify-content: space-around;
+}
+@media only screen and (min-width: 320px) {
+	.footer {
+		display: flex;
+		flex-direction: column;
+	}
+	.footer-icons{
+		margin-right: 100%;
+		
+		
+		display: flex;
+
+		justify-content: space-between;
+		
+	}
+	.footer-icons p{
+		font-size: 20px
+	}
+	.footer-icons i{
+		margin: 0px 40px;
+	}
 }

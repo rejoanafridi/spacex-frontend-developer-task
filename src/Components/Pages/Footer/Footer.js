@@ -1,4 +1,5 @@
 import React from "react";
+
 import imgVector from "../../images/Vector.png"
 const Footer = () => {
 	return (

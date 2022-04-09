@@ -14,7 +14,7 @@ const Header = () => {
 		<header className="section-banner indigo darken-4">
 			<div className="section no-pad-bot" id="index-banner">
 				<div className="row">
-					<div className="col s1 m2 l2  ">
+					<div className="col s12 m2 l2  ">
 						<img
 							className="banner-left-img-shape responsive-img"
 							src={imgShape}
@@ -26,8 +26,8 @@ const Header = () => {
 							alt=""
 						/>
 					</div>
-					<div className="col s2 m4 l4 left-content ">
-						<div className="title">
+					<div className="col s12 m4 l4 left-content ">
+						<div className="title ">
 							<span>
 								<img className="responsive-img" src={imgR82} alt="" />{" "}
 							</span>
@@ -35,16 +35,14 @@ const Header = () => {
 								<p>Welcome to Stella</p>
 							</span>
 						</div>
-						<div className="content text-white">
+						<div className="content center text-white">
 							<h1>
 								SPACE FOR <br /> EVERYONE
 							</h1>
 						</div>
 
-						<p className="text-white">
-							Lorem ipsum dolor sit amet, consectetur <br /> adipisicing elit.
-							Aliquam, doloremque quo!
-							<br /> Ad, accusantium saepe ipsa vero quis eos veniam quia.
+						<p className="text-white left-content-text">
+						At PIAP Space, we believe that we can make Space and Earth cleaner, engineering, and delivering top-quality robotics solutions.
 						</p>
 						<button className="banner-btns">Get Started</button>
 					</div>

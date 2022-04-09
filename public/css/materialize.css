@@ -2606,9 +2606,7 @@ textarea {
 ul:not(.browser-default) {
 	padding-left: 0;
 	list-style-type: none;
-  
 }
-
 
 ul:not(.browser-default) > li {
 	list-style-type: none;
@@ -2785,8 +2783,6 @@ video.responsive-video {
 	line-height: 30px;
 }
 
-
-
 .pagination li.active {
 	background-color: #fff;
 }
@@ -2912,12 +2908,6 @@ ul.staggered-list li {
 	.hide-on-small-only,
 	.hide-on-small-and-down {
 		display: none !important;
-	}
-	.man{
-		display: none;
-	}
-	.banner-image{
-		
 	}
 }
 
@@ -4552,12 +4542,10 @@ html {
 	html {
 		font-size: 14.5px;
 	}
-	.man{
-	/* display: none; */
-		
+	.man {
+		/* display: none; */
 	}
-	.banner-image{
-		
+	.banner-image {
 	}
 }
 

@@ -9,7 +9,7 @@
 .banner-left-img-shape {
 	position: absolute;
 	top: 203px;
-	left: 101px;
+	right: 34px;
 }
 .banner-left-img-bolb {
 	position: absolute;
@@ -84,4 +84,199 @@
 	position: absolute;
 	right: 600px;
 	top: 50px;
+}
+@media only screen and (min-width: 320px) {
+	.banner-image,
+	.banner-image-world,
+	.banner-image-ring,
+	.banner-left-img-shape,
+	.banner-left-img-bolb {
+		display: none;
+	}
+	.title {
+		width: 100%;
+		align-items: center;
+		/* margin-left: 39px; */
+	}
+	.left-content h1 {
+		font-size: 44px;
+		line-height: 50px;
+		text-align: center;
+		/* padding: 15px 0; */
+	}
+	.left-content p {
+		line-height: 30px;
+		font-size: 18px;
+		text-align: center;
+		
+	}
+	.left-content-text{
+		
+	}
+	.left-content {
+		margin-top: 50px;
+	}
+	.banner-btns {
+		margin-left: 24%;
+	}
+}
+@media only screen and (min-width: 481px) {
+	.banner-image,
+	.banner-image-world,
+	.banner-image-ring,
+	.banner-left-img-shape,
+	.banner-left-img-bolb {
+		display: block;
+	}
+	.banner-image {
+		width: 46%;
+		height: 45%;
+		top: 3%;
+	}
+	.banner-left-img-bolb {
+		width: 15%;
+		top: 280px
+	}
+	.man {
+		width: 40%;
+		/* left: 351px; */
+		right: 90px;
+		height: 44%;
+		top: 58px;
+	}
+	.banner-star {
+		width: 8%;
+		top: 50px;
+		right: 150px;
+	}
+	.banner-image-world {
+		width: 15%;
+		right: 35px;
+		top: 22%;
+	}
+	.banner-image-ring {
+		width: 8%;
+		right: 10px;
+		top: 41%;
+	}
+	.title {
+		width: 100%;
+	}
+	.left-content h1 {
+		font-size: 40px;
+		line-height: 40px;
+		text-align: left;
+		padding: 15px 0px;
+	}
+	.left-content p {
+		line-height: 20px;
+		font-size: 15px;
+		text-align: left;
+	}
+	.left-content {
+		margin-top: 50px;
+	}
+	.banner-btns {
+		margin-left: 0%;
+	}
+	.banner-left-img-shape {
+		/* width: 12%; */
+		/* margin-top: -80px; */
+		/* left: 10px; */
+		width: 90px;
+		left: 20px;
+		top: 145px;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+	.banner-image,
+	.banner-image-world,
+	.banner-image-ring,
+	.banner-left-img-shape,
+	.banner-left-img-bolb {
+		display: block;
+	}
+	.man {
+		width: 670px;
+		height: 670px;
+		position: absolute;
+		right: 351px;
+		top: 149px;
+	}
+	.title {
+		width: 50%;
+	}
+	.banner-image {
+		position: absolute;
+
+		top: -20px;
+		right: 0px;
+		height: 857px;
+		width: 900px;
+	}
+	.banner-image-world {
+		position: absolute;
+		top: 386px;
+		right: 284px;
+	}
+	.banner-image-ring {
+		position: absolute;
+		top: 700px;
+		right: 106px;
+		width: 136px;
+	}
+	.banner-star {
+		position: absolute;
+		right: 600px;
+		top: 50px;
+	}
+	.title span {
+		display: flex;
+
+		align-items: center;
+		padding: 10px;
+		height: 72px;
+		color: #fff;
+	}
+
+	.left-content h1 {
+		font-family: Russo One;
+		font-size: 83px;
+		font-weight: 400;
+		line-height: 100px;
+		letter-spacing: 0em;
+		text-align: left;
+		padding: 32px 0px;
+	}
+	.left-content p {
+		line-height: 33px;
+		font-size: 22px;
+		text-align: left;
+	}
+	.left-content-text {
+		width: 390px;
+		word-wrap: break-word;
+		font-family: Inter;
+		font-size: 22px;
+		font-weight: 400;
+		line-height: 33px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	.left-content {
+		margin-top: 150px;
+	}
+	.banner-btns {
+		margin-left: 0%;
+	}
+	.banner-left-img-shape {
+		width: 153px;
+		height: 132px;
+		top: 265px;
+		left: 151px;
+	}
+	.banner-left-img-bolb {
+		width: 310px;
+	}
 }
