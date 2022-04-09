@@ -101,8 +101,8 @@ const Rocket = () => {
 	// console.log(currentRockets);
 	return (
 		<section className=" indigo darken-4">
-			<div className="rocket-section-header container red-text ">
-				<div className="row">
+			<div className=" container section-padding ">
+				<div className="row rocket-section-header">
 					<div className="col s12 m6 l6">
 						<div className="row">
 							<div className="col s12 m6 l6 valign-wrapper">

@@ -103,7 +103,7 @@
 	.banner-image-world,
 	.banner-image-ring,
 	.banner-left-img-shape,
-	.banner-left-img-bolb {
+	.banner-left-img-bolb,.man-bg,.banner-star{
 		display: none;
 	}
 	.title {
@@ -136,8 +136,11 @@
 	.banner-image-world,
 	.banner-image-ring,
 	.banner-left-img-shape,
-	.banner-left-img-bolb {
+	.banner-left-img-bolb,.banner-star {
 		display: block;
+	}
+	.man-bg {
+		display: none;
 	}
 	.banner-image {
 		width: 43%;
@@ -212,7 +215,7 @@
 	.banner-image-world,
 	.banner-image-ring,
 	.banner-left-img-shape,
-	.banner-left-img-bolb {
+	.banner-left-img-bolb, .man-bg,.banner-star {
 		display: block;
 	}
 	.man {

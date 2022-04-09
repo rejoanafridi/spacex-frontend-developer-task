@@ -1,0 +1,41 @@
+/* footer */
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+.footer-text{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.footer p {
+
+	color: rgba(110, 124, 157, 1);
+	font-family: Inter;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.footer-icons {
+	font-size: 30px;
+	color: #5b5b5b;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.footer-icons i {
+	margin-left: 51px;
+}
+.logo {
+	font-family: Russo One;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #fff;
+}

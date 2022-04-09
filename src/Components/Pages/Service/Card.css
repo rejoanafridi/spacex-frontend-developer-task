@@ -32,16 +32,16 @@ h1 {
 }
 .card-content p {
 	color: rgba(218, 218, 218, 1);
-
 	padding-left: 2vw;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	width: 325px;
+	/* width: 325px; */
 	line-height: 25px;
 	display: -webkit-box;
 	-webkit-line-clamp: 5;
 	-webkit-box-orient: vertical;
 	padding-top: 15px;
+	font-size: 18px;
 }
 .cards-content:hover {
 	background-image: var(--fav-color);

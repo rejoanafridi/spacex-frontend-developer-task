@@ -7,32 +7,38 @@ const Nav = () => {
 		<nav className="indigo darken-4">
 			<div className="row container">
 				<div className="nav-logo col s9 m6 l6">
-					<a href="#" className="logo valign-wrapper">
+					<Link to="/" className="logo valign-wrapper">
 						<img src={vectorImg} alt="logo" />
-						  SPACE
-					</a>
+						SPACE
+					</Link>
 				</div>
 				<ul className="hide-on-small-and-down col s6 m6 l6 ">
 					<li>
-						<Link className="nav-active" to="/home">Home</Link>
+						<Link className="nav-active" to="/home">
+							Home
+						</Link>
 					</li>
 					<li>
 						<Link to="/about">About us</Link>
 					</li>
 					<li>
-						<Link to="/story">story</Link>
+						<Link to="/story">Story</Link>
 					</li>
 					<li>
-						<Link to="/blog">blog</Link>
+						<Link to="/blog">Blog</Link>
 					</li>
 					<li>
 						<Link className="contact-btns" to="/contact">
-							contact us
+							Contact Us
 						</Link>
 					</li>
 				</ul>
 
-				<a href="#" data-target="mobile-demo" className="sidenav-trigger hide-on-med-and-down">
+				<a
+					href="#"
+					data-target="mobile-demo"
+					className="sidenav-trigger hide-on-med-and-down"
+				>
 					<i className="material-icons">menu</i>
 				</a>
 				<ul className="sidenav" id="mobile-demo">
