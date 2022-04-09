@@ -143,8 +143,8 @@ const Rocket = () => {
 										<option value="2005">2001-2005</option>
 										<option value="2010">2006-2010</option>
 										<option value="2015">2011-2015</option>
-
 										<option value="2020">2016-2020</option>
+
 										<option value="2021">2021</option>
 									</select>
 								</div>
@@ -168,22 +168,22 @@ const Rocket = () => {
 
 			<div className="row container rocket-section-card">
 				{currentRockets.length == 0 ? (
-					<>
-						<div className="preloader-wrapper big active">
-							<div className="spinner-layer spinner-blue-only">
-								<div className="circle-clipper left">
-									<div className="circle"></div>
+					<div className="loader">
+						<div class="preloader-wrapper big active">
+							<div class="spinner-layer spinner-blue">
+								<div class="circle-clipper left">
+									<div class="circle"></div>
 								</div>
-								<div className="gap-patch">
-									<div className="circle"></div>
+								<div class="gap-patch">
+									<div class="circle"></div>
 								</div>
-								<div className="circle-clipper center">
-									<div className="circle"></div>
+								<div class="circle-clipper right">
+									<div class="circle"></div>
 								</div>
 							</div>
 						</div>
 						<h1 className="center">No Data Found</h1>
-					</>
+					</div>
 				) : (
 					currentRockets.map((rockets, index) => (
 						<Rockets rockets={rockets} key={index}></Rockets>

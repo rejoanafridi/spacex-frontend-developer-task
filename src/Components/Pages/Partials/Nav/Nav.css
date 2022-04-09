@@ -5,11 +5,10 @@ nav {
 	z-index: 20;
 	/* background: transparent; */
 	width: 100%;
-	
 }
-.nav{
+.nav {
 	background-color: #00000000;
-   }
+}
 .logo {
 	font-family: Russo One;
 	font-size: 20px;
@@ -21,9 +20,9 @@ nav {
 .logo img {
 	margin-right: 16px;
 }
-/* .nav ul a:hover {
-	color: var(--purple);
-} */
+nav ul a:hover {
+	color: var(--purple)
+}
 .nav-active {
 	color: var(--purple);
 }

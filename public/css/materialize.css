@@ -4448,9 +4448,7 @@ nav ul a {
 
 	cursor: pointer;
 }
-nav ul a:hover {
-	color: purple;
-}
+
 
 nav form {
 	height: 100%;

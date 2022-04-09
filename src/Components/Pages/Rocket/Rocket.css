@@ -43,7 +43,7 @@
 	color: white;
 	padding: 10px;
 	background: rgba(14, 13, 34, 1);
-	height:47px;
+	height: 47px;
 }
 
 /* rocket card csc */
@@ -74,4 +74,9 @@
 }
 .rocket-section-card {
 	margin-top: 40px;
+}
+.loader {
+	display: flex;
+	justify-content:center;
+	align-items:center;
 }
