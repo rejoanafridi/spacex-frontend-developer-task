@@ -1,7 +1,15 @@
 nav {
 	padding-top: 10px;
 	overflow: hidden;
+	position: absolute;
+	z-index: 20;
+	/* background: transparent; */
+	width: 100%;
+	
 }
+.nav{
+	background-color: #00000000;
+   }
 .logo {
 	font-family: Russo One;
 	font-size: 20px;

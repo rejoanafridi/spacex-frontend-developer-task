@@ -18,32 +18,40 @@ const Rocket = () => {
 	// sett launch state
 	const [launch, setLaunch] = useState("");
 
-	useEffect(() =>  {
+	useEffect(() => {
 		// const selectValue = parseInt(e.target.value);
-
-		const dateFilter = async (date) => {
-			const results = await axios(
-				`https://api.spacexdata.com/v3/launches?launch_year=${date}`
-			);
-			// console.log(results.data);
-			return results.data;
-		};
-		// console.log(dateFilter);
-		if (selectDate === 1990 || selectDate === 2021) {
-			const result = dateFilter(selectDate);
-			console.log(result)
-			// setRoket(result);
-		} else {
-			let result = [];
-			const firstYear = selectDate - 4;
-			for (let i = firstYear; i <= selectDate; i++) {
-				let resultFilterDate = dateFilter(i);
-				console.log(resultFilterDate);
-				// result = [...result, ...resultFilterDate];
+		const myFunction = async () => {
+			const dateFilter = async (date) => {
+				const results = await axios.get(
+					`https://api.spacexdata.com/v3/launches?launch_year=${date}`
+				);
+				// console.log(results.data);
+				return results.data;
+			};
+			// console.log(dateFilter);
+			if (selectDate === 1990 || selectDate === 2021) {
+				const result = await axios.get(
+					`https://api.spacexdata.com/v3/launches?launch_year=${selectDate}`
+				);
+				console.log(result);
 				// console.log(result)
+				setRoket(result.data);
+			} else {
+				let result = [];
+				const firstYear = selectDate - 4;
+				for (let i = firstYear; i <= selectDate; i++) {
+					let resultFilterDate = await axios.get(
+						`https://api.spacexdata.com/v3/launches?launch_year=${i}`
+					);
+					// console.log(result.data)
+					// console.log(resultFilterDate.data);
+					result = [...result, ...resultFilterDate.data];
+				}
+				console.log(result);
+				setRoket(result);
 			}
-			// setRoket(result);
-		}
+		};
+		myFunction();
 	}, [selectDate]);
 
 	// console.log(launch);
@@ -159,9 +167,28 @@ const Rocket = () => {
 			</div>
 
 			<div className="row container rocket-section-card">
-				{currentRockets.map((rockets, index) => (
-					<Rockets rockets={rockets} key={index}></Rockets>
-				))}
+				{currentRockets.length == 0 ? (
+					<>
+						<div className="preloader-wrapper big active">
+							<div className="spinner-layer spinner-blue-only">
+								<div className="circle-clipper left">
+									<div className="circle"></div>
+								</div>
+								<div className="gap-patch">
+									<div className="circle"></div>
+								</div>
+								<div className="circle-clipper center">
+									<div className="circle"></div>
+								</div>
+							</div>
+						</div>
+						<h1 className="center">No Data Found</h1>
+					</>
+				) : (
+					currentRockets.map((rockets, index) => (
+						<Rockets rockets={rockets} key={index}></Rockets>
+					))
+				)}
 			</div>
 			<Pagination
 				selectItems={selectItems}

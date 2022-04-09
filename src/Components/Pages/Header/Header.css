@@ -103,7 +103,9 @@
 	.banner-image-world,
 	.banner-image-ring,
 	.banner-left-img-shape,
-	.banner-left-img-bolb,.man-bg,.banner-star{
+	.banner-left-img-bolb,
+	.man-bg,
+	.banner-star {
 		display: none;
 	}
 	.title {
@@ -136,7 +138,8 @@
 	.banner-image-world,
 	.banner-image-ring,
 	.banner-left-img-shape,
-	.banner-left-img-bolb,.banner-star {
+	.banner-left-img-bolb,
+	.banner-star {
 		display: block;
 	}
 	.man-bg {
@@ -215,12 +218,14 @@
 	.banner-image-world,
 	.banner-image-ring,
 	.banner-left-img-shape,
-	.banner-left-img-bolb, .man-bg,.banner-star {
+	.banner-left-img-bolb,
+	.man-bg,
+	.banner-star {
 		display: block;
 	}
 	.man {
-		width: 670px;
-		height: 670px;
+		width: 700px;
+		height: 775px;
 		position: absolute;
 		right: 351px;
 		top: 149px;
@@ -229,25 +234,29 @@
 		width: 50%;
 	}
 	.banner-image {
-		position: absolute;
+		background-image: url(../../images/r8\ 1.png);
 
-		top: -20px;
-		right: 0px;
-		height: 857px;
-		width: 900px;
+		position: absolute;
+		top: -30px;
+		right: -550px;
+		z-index: 1;
+		height: 924px;
+		width: 1461px;
 		overflow: hidden;
+	
+		background-repeat: no-repeat;
 	}
 	.banner-image-world {
 		position: absolute;
-		top: 386px;
-		right: 284px;
-		width: 185px;
+		top: 401px;
+		right: 236px;
+		width: 250px;
 	}
 	.banner-image-ring {
 		position: absolute;
-		top: 700px;
-		right: 106px;
-		width: 136px;
+		top: 790px;
+		right: 118px;
+		width: 140px;
 	}
 	.banner-star {
 		position: absolute;

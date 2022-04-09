@@ -58,7 +58,7 @@ const Header = () => {
 						<img className="man" src={imgAsste1} alt="" />
 						<img className="man-bg" src={manBg} alt="" />
 						<div>
-							<img className="banner-image " src={imgR81} alt="" />
+							<div className="banner-image " />
 							<img
 								className="banner-image-world responsive-img"
 								src={imgR72}

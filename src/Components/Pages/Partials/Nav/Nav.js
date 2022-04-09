@@ -4,7 +4,7 @@ import vectorImg from "../../../images/Vector.png";
 import { Link } from "react-router-dom";
 const Nav = () => {
 	return (
-		<nav className="indigo darken-4">
+		<nav className=" z-depth-0">
 			<div className="row container">
 				<div className="nav-logo col s9 m6 l6">
 					<Link to="/" className="logo valign-wrapper">
