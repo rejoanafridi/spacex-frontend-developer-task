@@ -9,11 +9,11 @@ const Rockets = ({ rockets }) => {
 				<div className="card-content white-text">
 					<img
 						className="responsive-img"
-						src={links.mission_patch}
+						src={links?.mission_patch}
 						alt="rocket"
 					/>
 					<span>{mission_name}</span>
-					<p>Rocket name: {rocket.rocket_name}</p>
+					<p>Rocket name: {rocket?.rocket_name}</p>
 					<p>Launch Year: {launch_year ? launch_year : "none"}</p>
 					<p>Upcomming: {upcoming ? "true" : "false"}</p>
 				</div>

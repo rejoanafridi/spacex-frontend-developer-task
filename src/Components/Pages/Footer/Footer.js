@@ -1,23 +1,23 @@
 import React from "react";
 
-import imgVector from "../../images/Vector.png"
+import imgVector from "../../images/Vector.png";
 const Footer = () => {
 	return (
 		<footer className="indigo darken-5 ">
 			<div className="footer row container">
-				<div className="col s12 m3 l3">
+				<div className="col s3 m4 l4">
 					<a href="#" className="logo valign-wrapper">
 						<img src={imgVector} alt="" />
 						SPACE
 					</a>
 				</div>
-				<div className="col s12 m3 l3">
-					<p>space all right reserved 2022</p>
+				<div className="col s6 m4 l4">
+					<p>Space 2020, All rights reserved.</p>
 				</div>
-				<div className="col s1 m3 l3 footer-icons">
+				<div className="col s3 m4 l4 footer-icons">
 					<i className="fa-brands fa-twitter"></i>
-					<i className="fa-brands fa-facebook"></i>
-					<i className="fa-brands fa-linkedin"></i>
+					<i class="fa-brands fa-facebook-f"></i>
+					<i class="fa-brands fa-linkedin-in"></i>
 				</div>
 			</div>
 		</footer>

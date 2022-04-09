@@ -1,8 +1,22 @@
 nav {
 	padding-top: 10px;
+	overflow: hidden;
 }
-
-.nav ul a:hover {
+.logo {
+	font-family: Russo One;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.logo img {
+	margin-right: 16px;
+}
+/* .nav ul a:hover {
+	color: var(--purple);
+} */
+.nav-active {
 	color: var(--purple);
 }
 nav ul li a {
@@ -19,4 +33,10 @@ nav ul li a {
 	border-image-slice: 1;
 	border-width: 3px;
 	padding: 10px 25px;
+}
+
+@media only screen and (max-width: 768px) {
+	.contact-btns {
+		padding: 5px 12px;
+	}
 }

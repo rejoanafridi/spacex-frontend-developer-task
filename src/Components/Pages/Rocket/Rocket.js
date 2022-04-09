@@ -103,9 +103,9 @@ const Rocket = () => {
 		<section className=" indigo darken-4">
 			<div className="rocket-section-header container red-text ">
 				<div className="row">
-					<div className="col s6">
+					<div className="col s12 m6 l6">
 						<div className="row">
-							<div className="col s6 valign-wrapper">
+							<div className="col s12 m6 l6 valign-wrapper">
 								<p>Is upcomming?</p>
 								<div
 									className="col s6"
@@ -120,7 +120,7 @@ const Rocket = () => {
 									</select>
 								</div>
 							</div>
-							<div className="col s6 flex">
+							<div className="col s12 m6 l6 flex">
 								<p>launch Year?</p>
 								<div className="col s6">
 									<select
@@ -144,7 +144,7 @@ const Rocket = () => {
 						</div>
 					</div>
 
-					<div className="col s6 center">
+					<div className="col s12 m6 l6 center">
 						<div className="search flex">
 							<input
 								type=""

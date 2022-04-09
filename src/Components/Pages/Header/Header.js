@@ -7,8 +7,9 @@ import imgAsste5 from "../../images/Asset 5@2x-8.png";
 import imgAsste1 from "../../images/Asset 1@8x-8 1.png";
 import imgR81 from "../../images/r8 1.png";
 import imgR72 from "../../images/r7 2.png";
+import manBg from "../../images/Vector 98.png";
 import img21 from "../../images/2 1.png";
-import './Header.css'
+import "./Header.css";
 const Header = () => {
 	return (
 		<header className="section-banner indigo darken-4">
@@ -42,7 +43,9 @@ const Header = () => {
 						</div>
 
 						<p className="text-white left-content-text">
-						At PIAP Space, we believe that we can make Space and Earth cleaner, engineering, and delivering top-quality robotics solutions.
+							At PIAP Space, we believe that we can make Space and Earth
+							cleaner, engineering, and delivering top-quality robotics
+							solutions.
 						</p>
 						<button className="banner-btns">Get Started</button>
 					</div>
@@ -53,12 +56,9 @@ const Header = () => {
 							alt=""
 						/>
 						<img className="man" src={imgAsste1} alt="" />
+						<img className="man-bg" src={manBg} alt="" />
 						<div>
-							<img
-								className="banner-image "
-								src={imgR81}
-								alt=""
-							/>
+							<img className="banner-image " src={imgR81} alt="" />
 							<img
 								className="banner-image-world responsive-img"
 								src={imgR72}

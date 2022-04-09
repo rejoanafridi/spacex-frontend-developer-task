@@ -6,7 +6,7 @@ const Card = () => {
 	return (
 		<section className=" indigo darken-5">
 			<div className="row card-section container pd ">
-				<h1 className="center text-white">Discover Universe</h1>
+				<h1 className="center text-white section-title">Discover Universe</h1>
 
 				<div className="col s12 m4 ">
 					<div className="card cards-content">

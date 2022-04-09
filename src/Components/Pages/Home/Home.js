@@ -11,8 +11,7 @@ const Home = () => {
 			<Header></Header>
 			<Card></Card>
 			<Rocket></Rocket>
-               <About></About>
-			
+			<About></About>
 		</div>
 	);
 };

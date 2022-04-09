@@ -1,10 +1,19 @@
 /* Header css */
+
 .title {
 	background: rgba(9, 9, 9, 1);
 	display: flex;
 	align-items: center;
 	width: 50%;
 	border-radius: 5px;
+}
+.title p {
+	font-family: Inter;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 33px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 .banner-left-img-shape {
 	position: absolute;
@@ -54,6 +63,13 @@
 	color: #fff;
 	margin-top: 50px;
 }
+.man-bg {
+	position: absolute;
+	width: 759.23px;
+	height: 468.05px;
+	left: 683px;
+	top: 345px;
+}
 .man {
 	width: 670px;
 	height: 670px;
@@ -68,6 +84,7 @@
 	right: 0px;
 	height: 857px;
 	width: 900px;
+	/* transform: rotate(90deg); */
 }
 .banner-image-world {
 	position: absolute;
@@ -80,11 +97,7 @@
 	right: 106px;
 	width: 136px;
 }
-.banner-star {
-	position: absolute;
-	right: 600px;
-	top: 50px;
-}
+
 @media only screen and (min-width: 320px) {
 	.banner-image,
 	.banner-image-world,
@@ -108,10 +121,8 @@
 		line-height: 30px;
 		font-size: 18px;
 		text-align: center;
-		
 	}
-	.left-content-text{
-		
+	.left-content-text {
 	}
 	.left-content {
 		margin-top: 50px;
@@ -129,13 +140,13 @@
 		display: block;
 	}
 	.banner-image {
-		width: 46%;
-		height: 45%;
+		width: 43%;
+		height: 43%;
 		top: 3%;
 	}
 	.banner-left-img-bolb {
 		width: 15%;
-		top: 280px
+		top: 280px;
 	}
 	.man {
 		width: 40%;
@@ -187,6 +198,13 @@
 		left: 20px;
 		top: 145px;
 	}
+	.banner-star {
+		position: absolute;
+		right: 170px;
+		top: 50px;
+		transform: rotate(358deg);
+		width: 61px;
+	}
 }
 
 @media only screen and (min-width: 769px) {
@@ -214,11 +232,13 @@
 		right: 0px;
 		height: 857px;
 		width: 900px;
+		overflow: hidden;
 	}
 	.banner-image-world {
 		position: absolute;
 		top: 386px;
 		right: 284px;
+		width: 185px;
 	}
 	.banner-image-ring {
 		position: absolute;
@@ -228,8 +248,10 @@
 	}
 	.banner-star {
 		position: absolute;
-		right: 600px;
+		right: 450px;
 		top: 50px;
+		transform: rotate(358deg);
+		width: 131px;
 	}
 	.title span {
 		display: flex;
