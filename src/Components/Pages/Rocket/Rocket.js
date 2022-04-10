@@ -19,53 +19,6 @@ const Rocket = () => {
 	// sett launch state
 	const [launch, setLaunch] = useState("");
 
-	useEffect(() => {
-		// const selectValue = parseInt(e.target.value);
-		const myFunction = async () => {
-			// const dateFilter = async (date) => {
-			// 	const results = await axios.get(
-			// 		`https://api.spacexdata.com/v3/launches`
-			// 	);
-			// 	// console.log(results.data);
-			// 	setRoket(results.data)
-			// 	return results.data;
-
-			// };
-			// console.log(dateFilter);
-			if (
-				selectDate == 1990 ||
-				selectDate == 2021 ||
-				selectDate == 2000 ||
-				selectDate == 1995 ||
-				selectDate == 2005
-			) {
-				const result = await axios.get(
-					`https://api.spacexdata.com/v3/launches?launch_year=${selectDate}`
-				);
-
-				setRoket(result.data);
-			} else {
-				let result = [];
-				const firstYear = selectDate - 4;
-				for (let i = firstYear; i <= selectDate; i++) {
-					let resultFilterDate = await axios.get(
-						`https://api.spacexdata.com/v3/launches?launch_year=${i}`
-					);
-					// console.log(result.data)
-					// console.log(resultFilterDate.data);
-					if (resultFilterDate.data.length === 0) {
-						return result;
-					} else {
-						result = [...result, ...resultFilterDate.data];
-					}
-				}
-				// console.log(result);
-				setRoket(result);
-			}
-		};
-		myFunction();
-	}, [selectDate]);
-
 	// console.log(launch);
 	// upcoming filter
 	useEffect(() => {
@@ -119,6 +72,48 @@ const Rocket = () => {
 	const indexOfFirstRocket = indexOfLastRocket - selectItems;
 	const currentRockets = roket.slice(indexOfFirstRocket, indexOfLastRocket);
 	// console.log(currentRockets);
+	// date filter
+	useEffect(() => {
+		// const selectValue = parseInt(e.target.value);
+		const myFunction = async () => {
+			// const dateFilter = async (date) => {
+			// 	const results = await axios.get(
+			// 		`https://api.spacexdata.com/v3/launches`
+			// 	);
+			// 	// console.log(results.data);
+
+			// 	return results.data;
+			// };
+
+			// console.log(dateFilter);
+			if (selectDate == 1990 || selectDate == 2021) {
+				const result = await axios.get(
+					`https://api.spacexdata.com/v3/launches?launch_year=${selectDate}`
+				);
+
+				setRoket(result.data);
+			} else {
+				let result = [];
+				const firstYear = selectDate - 4;
+				for (let i = firstYear; i <= selectDate; i++) {
+					let resultFilterDate = await axios.get(
+						`https://api.spacexdata.com/v3/launches?launch_year=${i}`
+					);
+					// console.log(result.data)
+					// console.log(resultFilterDate.data);
+					// if (resultFilterDate.data.length === 0) {
+					// 	return result;
+					// } else {
+					result = [...result, ...resultFilterDate.data];
+					// }
+				}
+				// console.log(result);
+				setRoket(result);
+			}
+		};
+		myFunction();
+	}, [selectDate]);
+
 	return (
 		<section className=" indigo darken-4">
 			<div className=" container section-padding ">
@@ -139,16 +134,15 @@ const Rocket = () => {
 										<option value="upcoming">Yes</option>
 									</select>
 								</div>
+								<div className="line">|</div>
 							</div>
+						
 							<div className="col s12 m6 l6 flex">
 								<p>launch Year?</p>
 								<div className="col s6">
 									<select
 										className="browser-default text-white"
-										onChange={(e) => {
-											setSelectDate(parseInt(e.target.value));
-											console.log(setSelectDate);
-										}}
+										onClick={(e) => setSelectDate(parseInt(e.target.value))}
 									>
 										<option value="1990">1990</option>
 										<option value="1995">1991-1995</option>
@@ -181,7 +175,7 @@ const Rocket = () => {
 
 			<div className="row container rocket-section-card">
 				{roket.length === 0 ? (
-					<h1>data not found</h1>
+					<h1 className="text-white center">data not found select another launch year</h1>
 				) : (
 					currentRockets.map((rockets, index) => (
 						<Rockets rockets={rockets} key={index}></Rockets>
