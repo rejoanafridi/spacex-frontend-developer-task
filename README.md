@@ -1,5 +1,4 @@
-# Getting Started with Create React App
-This app started with create-react-app
+Live link: https://spacex-rejoan-islam.netlify.app/
 
 1-first clone this repo 
    git clone https://github.com/rejoanafridi/spacex-frontend-developer-task.git
