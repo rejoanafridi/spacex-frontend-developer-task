@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Pagination from "../Paginations/Pagination";
 import "./Rocket.css";
 import Rockets from "./Rockets";
@@ -8,10 +8,11 @@ const Rocket = () => {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [selectItems] = useState([8]);
 	//select date state
-	const [dateValue, selectDateValue] = useState([]);
+
 	const [selectDate, setSelectDate] = useState([]);
 
 	// console.log(selectDate);
+
 	// console.log(selectDate);
 	// console.log(roket);
 
@@ -21,20 +22,27 @@ const Rocket = () => {
 	useEffect(() => {
 		// const selectValue = parseInt(e.target.value);
 		const myFunction = async () => {
-			const dateFilter = async (date) => {
-				const results = await axios.get(
-					`https://api.spacexdata.com/v3/launches?launch_year=${date}`
-				);
-				// console.log(results.data);
-				return results.data;
-			};
+			// const dateFilter = async (date) => {
+			// 	const results = await axios.get(
+			// 		`https://api.spacexdata.com/v3/launches`
+			// 	);
+			// 	// console.log(results.data);
+			// 	setRoket(results.data)
+			// 	return results.data;
+
+			// };
 			// console.log(dateFilter);
-			if (selectDate === 1990 || selectDate === 2021) {
+			if (
+				selectDate == 1990 ||
+				selectDate == 2021 ||
+				selectDate == 2000 ||
+				selectDate == 1995 ||
+				selectDate == 2005
+			) {
 				const result = await axios.get(
 					`https://api.spacexdata.com/v3/launches?launch_year=${selectDate}`
 				);
-				console.log(result);
-				// console.log(result)
+
 				setRoket(result.data);
 			} else {
 				let result = [];
@@ -45,9 +53,13 @@ const Rocket = () => {
 					);
 					// console.log(result.data)
 					// console.log(resultFilterDate.data);
-					result = [...result, ...resultFilterDate.data];
+					if (resultFilterDate.data.length === 0) {
+						return result;
+					} else {
+						result = [...result, ...resultFilterDate.data];
+					}
 				}
-				console.log(result);
+				// console.log(result);
 				setRoket(result);
 			}
 		};
@@ -135,6 +147,7 @@ const Rocket = () => {
 										className="browser-default text-white"
 										onChange={(e) => {
 											setSelectDate(parseInt(e.target.value));
+											console.log(setSelectDate);
 										}}
 									>
 										<option value="1990">1990</option>
@@ -167,23 +180,8 @@ const Rocket = () => {
 			</div>
 
 			<div className="row container rocket-section-card">
-				{currentRockets.length == 0 ? (
-					<div className="loader">
-						<div class="preloader-wrapper big active">
-							<div class="spinner-layer spinner-blue">
-								<div class="circle-clipper left">
-									<div class="circle"></div>
-								</div>
-								<div class="gap-patch">
-									<div class="circle"></div>
-								</div>
-								<div class="circle-clipper right">
-									<div class="circle"></div>
-								</div>
-							</div>
-						</div>
-						<h1 className="center">No Data Found</h1>
-					</div>
+				{roket.length === 0 ? (
+					<h1>data not found</h1>
 				) : (
 					currentRockets.map((rockets, index) => (
 						<Rockets rockets={rockets} key={index}></Rockets>
