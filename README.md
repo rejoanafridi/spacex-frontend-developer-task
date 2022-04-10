@@ -19,8 +19,8 @@ This is Space x
    
    
    feature
-   Search by rocket name 
-   Rocket filter by launch year
-   Upcomming filtering
+   -Search by rocket name 
+   -Rocket filter by launch year
+   -Upcomming filtering
 
 
