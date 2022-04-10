@@ -1,6 +1,6 @@
 Live link: https://spacex-rejoan-islam.netlify.app/
 
-1-first clone this repo 
+1-first clone this repository
    git clone https://github.com/rejoanafridi/spacex-frontend-developer-task.git
 2- npm install 
    -> in this command install all dependencies for this project.
@@ -21,5 +21,3 @@ This is Space x
    -Search by rocket name 
    -Rocket filter by launch year
    -Upcomming filtering
-
-
